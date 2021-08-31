@@ -14,7 +14,7 @@ const dbURI = "mongodb://emankhaled:test12345@cluster0-shard-00-00.jmnrc.mongodb
 
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => app.listen(3000))
+  .then(result => app.listen (process.env.PORT||3000))
   .catch(err => console.log(err));
 
 // register view engine
